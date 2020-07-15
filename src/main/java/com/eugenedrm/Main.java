@@ -9,9 +9,8 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.examples.Example;
 
 public class Main {
-
   public static void main(String[] args) throws JsonProcessingException {
-    Umbrella exampleValue = new Umbrella(new ConcreteObjectA("x", "y"));
+    Umbrella exampleValue = new Umbrella(new ConcreteObjectA("x"));
     OpenAPI openApi = new OpenAPI()
         .components(new Components().addExamples("umbrellaExample", new Example().value(exampleValue)));
 
